@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tables</title>
+</head>
+<body>
+    <h1>Generate Tables</h1>
+    <form onclick="tab(); return false">
+    
+        Enter Digit value:
+        <input type="number" id="input1" min="1" placeholder="10">
+        
+        <input type="number" id="input2" min="1" placeholder="10">
+        <br>
+        <br>
+
+        <button>Generate</button>
+
+    </form>
+
+    <div id="result"></div>
+    <h3 id="error"></h3>
+
+    <script>
+        function tab() {
+            let result ="";
+
+            let number1 = Number(document.getElementById("input1").value);
+            let number2 = Number(document.getElementById("input2").value);
+
+
+            for (let i = 1; i <=number2; i++) {
+                result = (`${result} <p> ${number1} x ${i} = ${number1 * i} </p>`);
+
+            }
+            if(i  < 1) {
+                document.getElementById("error").innerHTML = `  
+                enter number greater then 1`;
+                return;
+                
+            }
+
+            document.getElementById("result").innerHTML = result;
+    
+
+        }
+    </script>
+
+</body>
+</html>
