@@ -32,13 +32,20 @@
             for (let i = 1; i <=number2; i++) {
                 result = (`${result} <p> ${number1} x ${i} = ${number1 * i} </p>`);
 
-            }
-            if(i  < 1) {
-                document.getElementById("error").innerHTML = `  
+                if(i < 1) {
+                document.querySelector("#error").innerHTML = `  
                 enter number greater then 1`;
                 return;
                 
             }
+            
+            }
+        //    if(i < 1) {
+        //         document.getElementById("error").innerHTML = `  
+        //         enter number greater then 1`;
+        //         return;
+                
+        //     }
 
             document.getElementById("result").innerHTML = result;
     
